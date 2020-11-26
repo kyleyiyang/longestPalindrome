@@ -6,8 +6,8 @@ class Solution {
         boolean isOdd=false;
         int len=0;
         for (int j=0;j<s.length();j++) {
-            if (Character.isLowerCase(s.charAt(j))) lower[s.charAt(j)-'a']++;
-            else upper[s.charAt(j)-'A']++;
+            if ((s.charAt(j)-'A')<26) upper[s.charAt(j)-'A']++;
+            else lower[s.charAt(j)-'a']++;
         }
         for (int i=0;i<26;i++) {
             len+=(lower[i]/2+upper[i]/2);
